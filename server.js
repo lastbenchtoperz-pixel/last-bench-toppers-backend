@@ -32,21 +32,7 @@ app.use("/api/announcements", announcementRoutes);
 app.use("/api/search", searchRoutes);
 
 // Database connection
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'last_bench_toppers',
-    port: 3306
-});
 
-db.connect((err) => {
-    if (err) {
-        console.error('Database connection failed:', err);
-        return;
-    }
-    console.log('✅ Connected to MySQL database');
-});
 
 // Test route
 app.get('/', (req, res) => {
